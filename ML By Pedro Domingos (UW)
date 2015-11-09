@@ -1,0 +1,15 @@
+ML By Pedro Domingos (UW)
+
+Key Elements of ML
+------------------------------------------------------------------------
+Three components of all ML algorithms:
+1). Representation
+	- Decision Trees
+	- Sets of rules/logic programs
+	- Instances
+	- Graphical Models (probability/bayesian)
+	- Neural Network
+	- Support vector machines
+	- Model ensembles (fusion of several techniques)
+2). Evaluation
+3). Optimisation
