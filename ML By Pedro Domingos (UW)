@@ -1,4 +1,4 @@
-ML By Pedro Domingos (UW)
+ML By Prof. Pedro Domingos (UW)
 
 Key Elements of ML
 ------------------------------------------------------------------------
@@ -7,9 +7,41 @@ Three components of all ML algorithms:
 	- Decision Trees
 	- Sets of rules/logic programs
 	- Instances
-	- Graphical Models (probability/bayesian)
-	- Neural Network
-	- Support vector machines
-	- Model ensembles (fusion of several techniques)
-2). Evaluation
-3). Optimisation
+	- Graphical Models (bayesian nets/ markov nets)
+	- Neural Networks 
+		(Idea here is to reverse engineer the computation: tries to mimic multiple neurons working inside human brain)
+	- Support vector machines (relatively new techinique)
+	- Model ensembles (best thing in learning is to use fusion of several techniques/models: similar to wisdom of crowds)
+2). Evaluation (in order to inspect whether the results that you expected have been achieved i.e. gauge the outputs)
+	- Accuracy
+	- Precision and recall
+		(precision is what fraction of your predicted spams were really spam and recall is out of all that were really spam how many have you correctly identified as spam)
+	- Squared error (used where numeric computations are involved espcially like predicting error in numeric quantities)
+	- Likelihood (how likely is what you are saying acc. to your model. It might not be useful to generalize results)
+	- Posterior probability (prior probability + likelihood = posterior probability that can be used to evaluate your model)
+	- Cost/utility (sometimes cost of false positive is much more than false negative and this has to be accounted e.g. putting an imp. mail in to spam)
+	- Margin (used to infer how far you are from actual results e.g. used in SVMs)
+	- Entropy
+	- KL divergence
+3). Optimisation (in order to generate possible candidates and select one to handover it to user. It requires some smart strategy to evaluate and pick the best one. People in operations research and continous maths try to use this) {Type of optimisation depends on type of representation and evaluation metric you choose.}
+	- Combinatorial optimisation (for discrete representations)	
+		e.g. greedy search
+	- Convex optimisation (to optimise numerical paramters usually continous)
+		e.g. gradient descent
+	- Constrained optimisation (combination of continous and combinatorial optimisation but constraints have to be linear or have to be converted in to linear)
+		e.g. Linear programming
+
+
+Types of Learning
+------------------------------------------------------------------------
+1). Supervised learning
+	- training data includes the desired outputs
+2). Unsupervised learning
+	- training data doesn't include the desired outputs
+3). Semi-supervised learning
+	- training data includes a few of the desired outputs
+4). Reinforcement learning
+	- rewards from sequence of actions
+
+
+
