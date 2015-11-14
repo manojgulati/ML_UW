@@ -57,12 +57,55 @@ Supervised learning
 	- Neural networks
 	- Support vector machines
 	- Model ensembles
-	- Learning theory
+	- Learning theory (to cover overfitting and curse of dimensionality)
 Unsupervised learning
 	- Clustering
-	- Dimensionality reduction
+	- Dimensionality reduction (use in order to analyse or visualize >=100k dimensions)
 
+------------------------------------------------------------------------
 
+Application areas of Supervised learning
+	- Situations where there is no Human expert
+	- Situations where human can perform the task but can't explain how they did it
+	- Situations where the desired function is changing quite frequently
+	- Situations where each user needs a customized function
+
+Learning a boolean fn.
+	- Given are four known inputs
+	- Try to figure out the unknown boolean fn. with known function examples
+	- Soln: Classification, nearest neighbor, if-else statments (maximally overfitting case)
+	- Goal of machine learning is to provide soln. to unknown examples as well (future inputs)
+	- Most of the real world problems will have double exponential complexity and won't be feasible to crack
+	 in brute force way. Ideally we need to generalize the soln.
+	- One way is Hypothesis spaces
+		-> m-of-n rules: where you select the set of cases and figure out base problem. This is widely used in medical data analytics where either a is true or b is true or both are true. More cases are added if information is not giving apt. diagnosis.
+
+Two views of learning
+	- Learning is the removal of our remaining uncertainity.
+	- Learning requires guessing a good, small hypothesis class.
+Machine learning involves guessing but that means it requires lot of instinct, gut and domain knowledge to make an informed guess. It doesn't mean we should start in a hit and try way with all the possible algo's available.
+
+We could be wrong !!
+	- Our prior knowledge might be wrong. In the sense that new inputs may lead to prove that previously acquired knowledge was wrong.
+	- Our guess of hypothesis class could be wrong. i.e. new inputs may change to belief and show that previous classification or guess was wrong.
+
+Two strategies for machine learning
+	- Develop languages for expressing prior knowledge (rule grammars)
+	- Develop flexible hypothesis spaces (nested collection of hypothesis, decision trees, neural networks)
+	- Goal is to develop algorithms for finding an hypothesis that fits the data
+
+------------------------------------------------------------------------
+
+Terminology
+	- Training example: <x, f(x)> i.e. sample 
+	- Target function (target concept): true fn. f that we are trying to learn
+	- Hypothesis: proposed fn. h similar to f
+	- Concept: a boolean fn. f(x)=1 is a positive examples.
+	- Classifier: a discrete valued fn. f(x) belongs to {1,....,K}. Classifier is the end product of learning and it can be used to predict in future w/o using training samples.
+	- Hypothesis space: a space of all possible hypothesis that can be output of the learning algorithm.
+	- Version space: subset of hypothesis space that have not been yet ruled out. So at some point of time version space may lead to zero. 
+	- Batch learning: Learning the model/classifier on historical data.
+	- Online learning: Learning the model in real time mode or the model gets updated as more and more data is pumped in.
 
 
 
