@@ -1,4 +1,5 @@
-ML By Prof. Pedro Domingos (UW)
+Machine Learning By Prof. Pedro Domingos (UW) {Courseera}
+Notes: Manoj Gulati PhD EE IIIT-Delhi (India)
 
 Key Elements of ML
 ------------------------------------------------------------------------
@@ -101,12 +102,29 @@ Terminology
 	- Target function (target concept): true fn. f that we are trying to learn
 	- Hypothesis: proposed fn. h similar to f
 	- Concept: a boolean fn. f(x)=1 is a positive examples.
-	- Classifier: a discrete valued fn. f(x) belongs to {1,....,K}. Classifier is the end product of learning and it can be used to predict in future w/o using training samples.
+	- Classifier: a discrete valued fn. f(x) belongs to {1,....,K}. Classifier is the end product of learning and it can be used to predict classes in future w/o using training samples.
 	- Hypothesis space: a space of all possible hypothesis that can be output of the learning algorithm.
 	- Version space: subset of hypothesis space that have not been yet ruled out. So at some point of time version space may lead to zero. 
 	- Batch learning: Learning the model/classifier on historical data.
 	- Online learning: Learning the model in real time mode or the model gets updated as more and more data is pumped in.
 
+Framework (dimensions) for Hypothesis Spaces
+	- Size: fixed or variable size of hypothesis spaces
+	- Randomness: deterministic or stochastic hypothesis spaces
+	- Parameterization: symbolic (discrete) or continous hypothesis spaces
+
+Framework (dimensions) for Learning Algorithms (these dimensions have to be taken care of based upon your application area)
+	- Search Procedure
+		- Direct computation: search for hypothesis e.g. naive bayesian
+		- Local search: start with some initial hypothesis and than optimize locally e.g. neural nets
+		- Constructive search: start with empty hypothesis, gradually add structure/beliefs with incremental occurances of training samples e.g. decision trees
+	- Timings
+		- Eager
+		- Lazy
+	- Online Vs. Batch (for eager algorithms)
+		- Online
+		- Batch
+		Whenever problem is not changing we can use 'batch' based learning. Also it is more effective as you have hold of all the training data but in 'online' training you have to adapt your model quickly on basis of real time feed of data. Both have there on application areas and use cases.
 
 
 
