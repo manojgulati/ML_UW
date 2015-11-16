@@ -1,8 +1,10 @@
 Machine Learning By Prof. Pedro Domingos (UW) {Courseera}
 Notes: Manoj Gulati PhD EE IIIT-Delhi (India)
 
+Week-1
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Key Elements of ML
-------------------------------------------------------------------------
+
 Three components of all ML algorithms:
 1). Representation
 	- Decision Trees
@@ -33,8 +35,9 @@ Three components of all ML algorithms:
 		e.g. Linear programming
 
 
-Types of Learning
 ------------------------------------------------------------------------
+Types of Learning
+
 1). Supervised (inductive) learning (easy)
 	- training data includes the desired outputs
 2). Unsupervised learning (hard)
@@ -64,7 +67,6 @@ Unsupervised learning
 	- Dimensionality reduction (use in order to analyse or visualize >=100k dimensions)
 
 ------------------------------------------------------------------------
-
 Application areas of Supervised learning
 	- Situations where there is no Human expert
 	- Situations where human can perform the task but can't explain how they did it
@@ -96,7 +98,6 @@ Two strategies for machine learning
 	- Goal is to develop algorithms for finding an hypothesis that fits the data
 
 ------------------------------------------------------------------------
-
 Terminology
 	- Training example: <x, f(x)> i.e. sample 
 	- Target function (target concept): true fn. f that we are trying to learn
@@ -126,8 +127,49 @@ Framework (dimensions) for Learning Algorithms (these dimensions have to be take
 		- Batch
 		Whenever problem is not changing we can use 'batch' based learning. Also it is more effective as you have hold of all the training data but in 'online' training you have to adapt your model quickly on basis of real time feed of data. Both have there on application areas and use cases.
 
+Difference b/w AI, ML and Data mining (DM)
+	- ML is a sub-field of AI 
+	- ML and data mining are quite related but certain topics reinforcement learning that are not covered in DM. Also certain techniques like visualization and databases that are covered in DM but not in ML.
 
+Week-2
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Decision Trees (DT)
+	- simple (not hard to use and output is easy to interpret)
+	- scalable
+	- Variable size
+	- Deterministic
+	- Discrete and continous parameters
+	* All the above listed features make DT's a nice algorithm
 
+Learning algorithms for DT's can be described as: 
+	- Constructive search: tree is built gradually by adding nodes
+	- Eager
+	- Batch
+
+Decision Trees (DT) hypothesis space
+	- Internal nodes test the valueof particular x_j and branch according to results.
+	- Leaf nodes specify the class h(x)
+	- Selecting starting node/features is most imp. for any DT to work. In some cases you may end up in choosing a wrong feature which may lead to exponentially smaller number of trial cases and may end up in non-optimal DT.
+	- If features in DT are continous, internal nodes may test the feature against a threshold. This means in practice in certain cases you can't approximate using DT's. High dimensional data may be hard fit using DT's.
+
+Decision tree decision boundaries
+	- x1>3, x2<4, x1<2, x2>5 may help in deciding axis decision boundaries.
+	- We can DT out of any truth table. However in worst case DT will have all the cases of truth table covered in leaf nodes.
+	- DT may require exponential number of nodes in worst scenarios.
+	- as the number of nodes in tree increases, the hypothesis space also increases (depth1, depth2, etc).
+	- First step in forming a DT is selecting a 'root' node but the attribute with highest weight must be made root. You can also choose the root node to divide training cases in to half. 
+	- Best selection for 'root' node would be to choose an attribute which clearly diversifies b/w two categories.
+	- Finding an appropriate attribute for finding smallest decision tree is an NP complete problem. It has to be governed by some heuristics. But those heuristics must lead to min. error rate.
+
+A better heuristic from information theory (covering information gain or mutual information)
+	- Bernouli distribution: binary solution (either one or two)
+	- Amount of information gained will be higher when uncertainity of the event is higher. Less the likelihood higher is the surprise level.
+	- Degree of surprise: -log P(V=v) where P is probability of occurance of V=v.
+	- Entropy: average of surprise 
+		i.e. H(V) = Sum from v=0 to 1( -P(H=v)logP(H=v) )	Here it is multiplied by probability to consider average. Things which occur often have higher probability.
+	- Entropy is a measure of uncertainty.
+	- Mutual information: between two variables is the reduction in entropy of one by knowing the class of other variable. 
+		i.e. 
 
 
 
